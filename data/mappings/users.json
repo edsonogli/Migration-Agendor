@@ -1,0 +1,39 @@
+{
+  "users": {
+    "858738": 45,
+    "863644": 68,
+    "863884": 62,
+    "863887": 55,
+    "863895": 53,
+    "863908": 45,
+    "863922": 59,
+    "864067": 56,
+    "880908": 57,
+    "895769": 45,
+    "899022": 60,
+    "902980": 61,
+    "933769": 54,
+    "955782": 58,
+    "955783": 52,
+    "963606": 71
+  },
+  "defaultUser": 45,
+  "notes": {
+    "858738": "SSantos Advogados → 45 (Comercial)",
+    "863644": "Camila Pereira → 68",
+    "863884": "Amanda Martinez → 62",
+    "863887": "Marcela → 55 (Marcela Candeias)",
+    "863895": "Camila Leal → 53",
+    "863908": "MG → 45 (sem correspondência, usa default)",
+    "863922": "Karolina → 59 (Karolina Alves)",
+    "864067": "Nicholy → 56 (Nicholy Ramos)",
+    "880908": "Tatiana → 57 (Tatiana Ferrari)",
+    "895769": "Jéssica Rocha → 45 (sem correspondência, usa default)",
+    "899022": "Maria Clara Olivero → 60",
+    "902980": "Thalyta → 61 (Thalyta Rodrigues)",
+    "933769": "Larissa Araújo → 54",
+    "955782": "Sâm → 58 (Sâm Sousa)",
+    "955783": "Carlos Machado → 52 (Carlos Augusto)",
+    "963606": "Ana Luiza → 71 (Ana Luiza Pereira)"
+  }
+}

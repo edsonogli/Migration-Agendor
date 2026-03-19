@@ -1,0 +1,54 @@
+{
+  "funnels": {
+    "770626": {
+      "agendorName": "Funil Comercial Geral",
+      "zafchatId": "699bdcc4f3580905ba2cc132",
+      "zafchatName": "Comercial geral",
+      "stages": {
+        "3174269": "699bdcd6f3580905ba2cc133",
+        "3197011": "699bdcdef3580905ba2cc134",
+        "3174270": "699c3fa6273efc232f456c6f",
+        "3347289": "699c3fbd273efc232f456c74",
+        "3174272": "699c3fe0273efc232f456c7c",
+        "3174271": "699c3ff2273efc232f456c84"
+      },
+      "stageNames": {
+        "3174269": "NO SHOW",
+        "3197011": "CONHECIMENTO",
+        "3174270": "CONSTRUÇÃO",
+        "3347289": "CONVENCIMENTO",
+        "3174272": "FECHAMENTO",
+        "3174271": "GANHO"
+      }
+    },
+    "792504": {
+      "agendorName": "Funil de Prospecção",
+      "zafchatId": "699bce390a2f6f7cf201632a",
+      "zafchatName": "Prospecção",
+      "stages": {
+        "3276723": "699bce520a2f6f7cf201632b",
+        "3276724": "699bce5b0a2f6f7cf201632c",
+        "3276725": "699c406d273efc232f456c98",
+        "3682735": "699c4079273efc232f456c99"
+      },
+      "stageNames": {
+        "3276723": "LEAD",
+        "3276724": "ABORDAGEM",
+        "3276725": "QUALIFICAÇÃO",
+        "3682735": "CONVERSÃO"
+      }
+    },
+    "797486": {
+      "agendorName": "Funil de Remarketing",
+      "zafchatId": "699bcaba5f30ac4424ad0a5f",
+      "zafchatName": "Remarketing",
+      "stages": {
+        "3300776": "699bcacf5f30ac4424ad0a60"
+      },
+      "stageNames": {
+        "3300776": "Contato"
+      }
+    }
+  },
+  "projectId": 396140
+}
