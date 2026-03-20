@@ -94,7 +94,8 @@ function transformPerson(agendorPerson, mappings, config) {
     state: null,
     address: null,
     zipCode: null,
-    origin: 'agendor_migration',
+    origin: agendorPerson.leadOrigin?.name || 'Agendor Migration',
+    source: 'agendor',
     
     // Flags
     isDeleted: false,
@@ -158,7 +159,8 @@ function transformOrganization(agendorOrg, mappings, config) {
     state: agendorOrg.address?.state || null,
     address: agendorOrg.address?.street || null,
     zipCode: agendorOrg.address?.postalCode || null,
-    origin: 'agendor_migration',
+    origin: agendorOrg.leadOrigin?.name || 'Agendor Migration',
+    source: 'agendor',
     
     // Flags
     isDeleted: false,
