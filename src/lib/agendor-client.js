@@ -115,6 +115,10 @@ class AgendorClient {
   async getOrganizations(filters = {}) {
     return this.fetchAll('/organizations', filters);
   }
+
+  async getProducts(filters = {}) {
+    return this.fetchAll('/products', filters);
+  }
 }
 
 module.exports = AgendorClient;

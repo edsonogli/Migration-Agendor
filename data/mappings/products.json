@@ -1,0 +1,44 @@
+{
+  "products": {
+    "1411781": {
+      "zafchatId": "69a4ffe4886c1ef095eadd57",
+      "name": "IRPF - ISENÇÃO DO IMPOSTO DE RENDA POR DOENÇA GRAVE"
+    },
+    "1411783": {
+      "zafchatId": "69a4fffd886c1ef095eadd58",
+      "name": "IRPF- ISENÇÃO DE IR SOBRE CONTRIBUIÇÕES EXTRAORDINÁRIAS"
+    },
+    "1411784": {
+      "zafchatId": "69a500eb886c1ef095eadd5b",
+      "name": "PETROS - RMI 90%"
+    },
+    "1411785": {
+      "zafchatId": "69a4ffc2886c1ef095eadd56",
+      "name": "INSS - REVISÃO DE TETO"
+    },
+    "1411786": {
+      "zafchatId": "69a50103886c1ef095eadd5c",
+      "name": "PREVI - REVISÃO MULHER"
+    },
+    "1532149": {
+      "zafchatId": "69a5011c886c1ef095eadd5d",
+      "name": "REVISÃO PASEP"
+    },
+    "1608411": {
+      "zafchatId": "69a4ff0b886c1ef095eadd4e",
+      "name": "CÍVIL / CONSULTIVA"
+    },
+    "1617776": {
+      "zafchatId": "69a500d9886c1ef095eadd5a",
+      "name": "PETROS - REVISÃO DE PENSÃO"
+    },
+    "1617778": {
+      "zafchatId": "69a4ff4f886c1ef095eadd51",
+      "name": "INSS - CONCESSÃO BPC IDOSO/DOENÇA"
+    },
+    "1617780": {
+      "zafchatId": "69a4ff67886c1ef095eadd52",
+      "name": "INSS - CONCESSÃO GERAL"
+    }
+  }
+}

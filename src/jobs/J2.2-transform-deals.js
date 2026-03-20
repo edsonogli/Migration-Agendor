@@ -29,6 +29,15 @@ async function run() {
       fs.readFileSync(path.join(__dirname, '../../data/mappings/funnels-stages.json'), 'utf8')
     );
     
+    let productsMapping = { products: {} };
+    try {
+      productsMapping = JSON.parse(
+        fs.readFileSync(path.join(__dirname, '../../data/mappings/products.json'), 'utf8')
+      );
+    } catch (e) {
+      logger.warn('Mapeamento de produtos não encontrado ou inválido.');
+    }
+    
     const config = {
       PROJECT_ID: parseInt(process.env.PROJECT_ID),
       DEFAULT_USER_ID: parseInt(process.env.DEFAULT_USER_ID || 45)
@@ -53,7 +62,8 @@ async function run() {
           record.rawData,
           { 
             users: usersMapping.users,
-            funnels: funnelsMapping.funnels
+            funnels: funnelsMapping.funnels,
+            products: productsMapping.products
           },
           config
         );

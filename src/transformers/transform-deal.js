@@ -57,6 +57,27 @@ function transformDeal(agendorDeal, mappings, config) {
   // 6. Contact number (will be filled during contact migration)
   const contactNumber = extractContactNumber(agendorDeal);
 
+  // 7. Products mapping
+  const mappedProducts = [];
+  const productsMapping = mappings.products || {};
+  
+  if (agendorDeal.products_entities && Array.isArray(agendorDeal.products_entities)) {
+    for (const prod of agendorDeal.products_entities) {
+      const mapping = productsMapping[prod.id];
+      if (mapping && mapping.zafchatId) {
+        mappedProducts.push({
+          productId: new ObjectId(mapping.zafchatId),
+          name: mapping.name || 'Produto Migrado',
+          quantity: Decimal128.fromString((prod.quantity || 1).toString()),
+          unitPrice: Decimal128.fromString((prod.unitValue || 0).toString()),
+          total: Decimal128.fromString((prod.totalValue || 0).toString())
+        });
+      } else {
+        logger.warn(`Deal ${agendorDeal.id}: Produto ${prod.id} no encontrado no mapeamento`);
+      }
+    }
+  }
+
   return {
     // Core
     title: agendorDeal.title || 'Negócio sem título',
@@ -88,7 +109,7 @@ function transformDeal(agendorDeal, mappings, config) {
     qualificationSummary: null,
     notes: agendorDeal.description || '',
     tags: [],
-    products: [],
+    products: mappedProducts,
     source: 'agendor',
     
     // Loss info
