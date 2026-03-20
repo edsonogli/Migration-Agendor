@@ -4,7 +4,7 @@
  */
 
 require('dotenv').config();
-const MongoClientZafChat = require('../lib/mongo-client');
+const MongoClientZafChat = require('../src/lib/mongo-client');
 const fs = require('fs');
 const path = require('path');
 

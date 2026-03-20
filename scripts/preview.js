@@ -4,8 +4,8 @@
  */
 
 require('dotenv').config();
-const AgendorClient = require('../lib/agendor-client');
-const logger = require('../lib/logger');
+const AgendorClient = require('../src/lib/agendor-client');
+const logger = require('../src/lib/logger');
 
 async function preview() {
   logger.info('📊 MIGRATION PREVIEW');

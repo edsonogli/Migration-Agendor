@@ -4,9 +4,9 @@
  */
 
 require('dotenv').config();
-const MongoClientZafChat = require('../lib/mongo-client');
+const MongoClientZafChat = require('../src/lib/mongo-client');
 const { ObjectId } = require('mongodb');
-const logger = require('../lib/logger');
+const logger = require('../src/lib/logger');
 
 async function linkTasksToDeals() {
   logger.info('🔗 Starting Task-Deal linking...');

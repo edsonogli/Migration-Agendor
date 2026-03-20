@@ -4,10 +4,10 @@
  */
 
 require('dotenv').config();
-const MongoClientZafChat = require('../lib/mongo-client');
+const MongoClientZafChat = require('../src/lib/mongo-client');
 const fs = require('fs');
 const path = require('path');
-const logger = require('../lib/logger');
+const logger = require('../src/lib/logger');
 
 const EXPORT_DIR = path.join(__dirname, '../../exports');
 
