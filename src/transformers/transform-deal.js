@@ -61,19 +61,21 @@ function transformDeal(agendorDeal, mappings, config) {
   const mappedProducts = [];
   const productsMapping = mappings.products || {};
   
-  if (agendorDeal.products_entities && Array.isArray(agendorDeal.products_entities)) {
-    for (const prod of agendorDeal.products_entities) {
+  const agendorProducts = agendorDeal.products || agendorDeal.products_entities || [];
+  
+  if (Array.isArray(agendorProducts) && agendorProducts.length > 0) {
+    for (const prod of agendorProducts) {
       const mapping = productsMapping[prod.id];
       if (mapping && mapping.zafchatId) {
         mappedProducts.push({
           productId: new ObjectId(mapping.zafchatId),
-          name: mapping.name || 'Produto Migrado',
+          name: mapping.name || prod.name || 'Produto Migrado',
           quantity: Decimal128.fromString((prod.quantity || 1).toString()),
-          unitPrice: Decimal128.fromString((prod.unitValue || 0).toString()),
-          total: Decimal128.fromString((prod.totalValue || 0).toString())
+          unitPrice: Decimal128.fromString((prod.price || prod.unitValue || 0).toString()),
+          total: Decimal128.fromString((prod.price || prod.totalValue || 0).toString())
         });
       } else {
-        logger.warn(`Deal ${agendorDeal.id}: Produto ${prod.id} no encontrado no mapeamento`);
+        logger.warn(`Deal ${agendorDeal.id}: Produto ${prod.id} nao encontrado no mapeamento`);
       }
     }
   }
