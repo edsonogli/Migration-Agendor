@@ -55,7 +55,12 @@ function transformDeal(agendorDeal, mappings, config) {
   const value = Decimal128.fromString((agendorDeal.value || 0).toString());
 
   // 6. Contact number (will be filled during contact migration)
-  const contactNumber = extractContactNumber(agendorDeal);
+  let contactNumber = extractContactNumber(agendorDeal);
+  
+  // Se não veio no Deal e temos no mapping da pessoa do deal, usa o telefone do map
+  if (contactNumber.startsWith('AGENDOR-') && agendorDeal.person && mappings.phones && mappings.phones[agendorDeal.person.id]) {
+    contactNumber = mappings.phones[agendorDeal.person.id];
+  }
 
   // 7. Products mapping
   const mappedProducts = [];

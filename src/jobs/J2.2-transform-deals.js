@@ -51,7 +51,32 @@ async function run() {
       status: 'fetched'
     }).toArray();
     
-    logger.info(`Found ${deals.length} deals to transform`);
+    // Build phones map from fetched people
+    const people = await collection.find({
+      entityType: 'person',
+      status: 'fetched'
+    }).toArray();
+    
+    const phonesMapping = {};
+    for (const p of people) {
+      const raw = p.rawData;
+      const contact = raw.contact;
+      if (contact) {
+        let phone = contact.whatsapp || contact.mobile || contact.work;
+        if (phone) {
+          // normalize
+          let normalized = phone.replace(/\D/g, '').replace(/^0+/, '');
+          if (normalized.length === 10 || normalized.length === 11) {
+            normalized = '55' + normalized;
+          }
+          if (normalized.length >= 12 && normalized.length <= 15) {
+            phonesMapping[p.agendorId.toString()] = normalized;
+          }
+        }
+      }
+    }
+    
+    logger.info(`Found ${deals.length} deals to transform, mapped ${Object.keys(phonesMapping).length} phone numbers`);
     
     let transformed = 0;
     let errors = 0;
@@ -63,7 +88,8 @@ async function run() {
           { 
             users: usersMapping.users,
             funnels: funnelsMapping.funnels,
-            products: productsMapping.products
+            products: productsMapping.products,
+            phones: phonesMapping
           },
           config
         );
