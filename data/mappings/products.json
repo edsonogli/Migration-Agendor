@@ -39,6 +39,38 @@
     "1617780": {
       "zafchatId": "69a4ff67886c1ef095eadd52",
       "name": "INSS - CONCESSÃO GERAL"
+    },
+    "1617781": {
+      "zafchatId": "69a4ff7e886c1ef095eadd53",
+      "name": "INSS - CÔMPUTO TEMPO DE SERVIÇO"
+    },
+    "1617782": {
+      "zafchatId": "69a4ffb1886c1ef095eadd55",
+      "name": "INSS - PLANEJAMENTO PREVIDENCIÁRIO"
+    },
+    "1617783": {
+      "zafchatId": "69a4ff35886c1ef095eadd50",
+      "name": "INSS - CONCESSÃO BPC AUTISTA"
+    },
+    "1617784": {
+      "zafchatId": "69a4ff21886c1ef095eadd4f",
+      "name": "FUNCEF - ISONOMIA MULHER"
+    },
+    "1617785": {
+      "zafchatId": "69a5001d886c1ef095eadd59",
+      "name": "MÉDICOS - CONTRIBUIÇÃO ACIMA DO TETO INSS"
+    },
+    "1704762": {
+      "zafchatId": "69a4ff99886c1ef095eadd54",
+      "name": "INSS - DESCONTOS INDEVIDOS"
+    },
+    "1832542": {
+      "zafchatId": "69a4feea886c1ef095eadd4d",
+      "name": "AÇÃO DE REPARO SOBRE GOLPE"
+    },
+    "2002859": {
+      "zafchatId": "699bcded0a2f6f7cf2016328",
+      "name": "REVISÃO BENEF. DO INSS - INCLUSÃO DE AUXÍLIO-ALIMENTAÇÃO RMI"
     }
   }
 }
